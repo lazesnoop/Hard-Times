@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://b77hd3x758m5g"]
 
+[ext_resource type="Script" uid="uid://dyidj4exqk5rc" path="res://node_2d.gd" id="1_0e48y"]
+[ext_resource type="PackedScene" uid="uid://rmvusyw0b2ad" path="res://video_stream_player.tscn" id="2_epypp"]
+
 [node name="Control" type="Control" unique_id=1459811595]
 layout_mode = 3
 anchors_preset = 15
@@ -7,13 +10,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_0e48y")
 
-[node name="Button" type="Button" parent="." unique_id=567649405]
+[node name="Start" type="Button" parent="." unique_id=567649405]
 layout_mode = 0
-offset_left = 445.0
-offset_top = 310.0
-offset_right = 491.0
-offset_bottom = 341.0
+offset_left = 497.0
+offset_top = 329.0
+offset_right = 597.0
+offset_bottom = 391.0
+theme_override_colors/font_hover_pressed_color = Color(0.8001071, 0.6094515, 0.8352015, 1)
 theme_override_colors/icon_pressed_color = Color(1, 1, 0.43529412, 1)
 theme_override_font_sizes/font_size = 39
 text = "Start"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1826181486]
+
+[node name="Control" parent="." unique_id=379423100 instance=ExtResource("2_epypp")]
+visible = false
+position = Vector2(-1, 1)
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]

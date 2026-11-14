@@ -1,10 +1,23 @@
 [gd_scene format=3 uid="uid://rmvusyw0b2ad"]
 
-[ext_resource type="VideoStream" uid="uid://lb83cshqalat" path="res://cropped.ogv" id="1_8ndh1"]
+[ext_resource type="VideoStream" uid="uid://diklwg0nn3puj" path="res://cropped (1).ogv" id="1_8ndh1"]
+[ext_resource type="Script" uid="uid://bcl2o8x0w3owd" path="res://video_stream_player.gd" id="1_y42jt"]
 
-[node name="intro_tscn" type="Node2D" unique_id=1067101997]
+[node name="Control" type="Node2D" unique_id=379423100]
+script = ExtResource("1_y42jt")
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1932517809]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1689665155]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.000004
+offset_top = 5.0000005
+offset_right = 1135.0
+offset_bottom = 1085.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0174074, 0.6103692)
 stream = ExtResource("1_8ndh1")
+autoplay = true
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
