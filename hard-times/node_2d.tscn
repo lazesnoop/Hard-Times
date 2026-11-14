@@ -1,3 +1,19 @@
 [gd_scene format=3 uid="uid://b77hd3x758m5g"]
 
-[node name="Node2D" type="Node2D" unique_id=2038718745]
+[node name="Control" type="Control" unique_id=1459811595]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="." unique_id=567649405]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 310.0
+offset_right = 491.0
+offset_bottom = 341.0
+theme_override_colors/icon_pressed_color = Color(1, 1, 0.43529412, 1)
+theme_override_font_sizes/font_size = 39
+text = "Start"

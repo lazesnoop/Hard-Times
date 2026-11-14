@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://rmvusyw0b2ad"]
+
+[ext_resource type="VideoStream" uid="uid://lb83cshqalat" path="res://cropped.ogv" id="1_8ndh1"]
+
+[node name="intro_tscn" type="Node2D" unique_id=1067101997]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1932517809]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("1_8ndh1")

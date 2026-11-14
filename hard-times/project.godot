@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Hard Times"
-run/main_scene="uid://bnea1fru4vq5i"
+run/main_scene="uid://rmvusyw0b2ad"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
