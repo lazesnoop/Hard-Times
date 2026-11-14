@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cj8grlp7c7xpc"]
+
+[ext_resource type="Script" uid="uid://b37qmh8kokqir" path="res://character.gd" id="1_pjt0s"]
+[ext_resource type="Texture2D" uid="uid://ckmd05ow3vdhp" path="res://Assets/char.png" id="2_pjt0s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fx374"]
+size = Vector2(300.07874, 337.5597)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fx374"]
+radius = 20.397758
+
+[node name="Character" type="Node2D" unique_id=184402571]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1548069045]
+scale = Vector2(0.71652764, 0.7055643)
+script = ExtResource("1_pjt0s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1421676473]
+position = Vector2(11.164957, -171.49393)
+scale = Vector2(0.9999999, 1)
+shape = SubResource("RectangleShape2D_fx374")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/CollisionShape2D" unique_id=29432179]
+texture = ExtResource("2_pjt0s")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1911305414]
+position = Vector2(13, -156)
+scale = Vector2(3.7247102, 0.5516281)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1371280971]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=158906449]
+position = Vector2(-2, -166)
+scale = Vector2(25.739708, -22.07833)
+shape = SubResource("CircleShape2D_fx374")
