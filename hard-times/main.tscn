@@ -9,7 +9,7 @@ size = Vector2(128, 129)
 [node name="main" type="Node2D" unique_id=322155903]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=125746945]
-position = Vector2(595, 317)
+position = Vector2(557, 172)
 scale = Vector2(14.954905, 2.5766122)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=352137985]
